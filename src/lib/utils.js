@@ -979,7 +979,7 @@ async function setEnvs(envsFile) {
   }
 }
 
-async function log(config, level, message) {
+async function log(config, level, message, object) {
   let logLevelMatch = false;
   if (config.logLevel === "error" && level === "error") {
     logLevelMatch = true;
@@ -1007,6 +1007,7 @@ async function log(config, level, message) {
     if (typeof message === "string") {
       let logMessage = `(${level.toUpperCase()}) ${message}`;
       console.log(logMessage);
+      if (object) console.log(object);
     } else if (typeof message === "object") {
       let logMessage = `(${level.toUpperCase()})`;
       console.log(logMessage);

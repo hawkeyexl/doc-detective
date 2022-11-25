@@ -21,18 +21,15 @@ exports.suggest = suggest;
 async function test(config, argv) {
   // Set args
   argv = setArgs(argv);
-  log(config, "debug", `ARGV:`);
-  log(config, "debug", argv);
+  log(config, "debug", `ARGV:`, argv);
 
   // Set config
   config = setConfig(config, argv);
-  log(config, "debug", `CONFIG:`);
-  log(config, "debug", config);
+  log(config, "debug", `CONFIG:`, config);
 
   // Set files
   const files = setFiles(config);
-  log(config, "debug", `FILES:`);
-  log(config, "debug", files);
+  log(config, "debug", `FILES:`, files);
 
   // Set tests
   const tests = parseTests(config, files);

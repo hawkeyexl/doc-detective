@@ -142,7 +142,7 @@ async function runTests(config, tests) {
     }
     // Iterate through actions
     for (const action of test.actions) {
-      log(config, "debug", `ACTION: ${JSON.stringify(action)}`);
+      log(config, "debug", `ACTION:`, action);
       action.result = await runAction(
         config,
         action,
