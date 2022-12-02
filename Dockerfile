@@ -13,4 +13,11 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+# Install Chromium/Chrome/Firefox
+RUN apt-get update
+RUN apt-get -y install chromium-browser firefox libxss1 libappindicator1 libindicator7
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN sudo apt install -y ./google-chrome*.deb
+
+# Add entrypoint command base
 ENTRYPOINT [ "npm", "run" ]
