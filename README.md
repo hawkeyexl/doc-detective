@@ -1,5 +1,7 @@
 # Doc Detective: The Documentation Testing Framework
 
+:warning: **Important:** Doc Detective is now actively maintained at [doc-detective/doc-detective](https://github.com/doc-detective/doc-detective). :warning:
+
 Unit test documentation to validate UX flows, in-GUI text, and images. Primarily useful for process docs, Doc Detective supports test definitions single-sourced in documentation or defined in separate test files to suit your infrastructure needs.
 
 Doc Detective ingests text files, parses them for test actions, then executes those actions in a headless Chromium browser. The results (PASS/FAIL and context) are output as a JSON object so that other pieces of infrastructure can parse and manipulate them as needed.
